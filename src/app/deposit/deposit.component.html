@@ -1,0 +1,29 @@
+<div class="col-md-8 offset-md-3">
+
+    <h2 class="text-center">Deposit</h2>
+    
+    <div *ngIf="successMessage" class="alert alert-success">
+
+        {{successMessage}}
+
+    </div>
+    <div *ngIf="errorMessage" class="alert alert-danger">
+
+        {{errorMessage}}
+
+    </div>
+   
+    
+    <form (ngSubmit)="onSubmit()">
+    
+        <div>
+            <label>Balance</label>
+            <input type="text" id="balance" class="form-control" name="balance" placeholder="Enter Balance"
+            [(ngModel)]="account.balance"/>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success">Submit</button>
+    
+    
+    </form>
+    </div>

@@ -1,0 +1,27 @@
+<table class="table table-bordered">
+    <thead>
+      
+        <th>ID</th>
+        <th>AccountHolderName</th>
+        <th>Balance</th>
+        <th>Action</th>
+
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor="let account of accounts">
+            
+            <td>{{account.id}}</td>
+            <td>{{account.accountHolderName}}</td>
+            <td>{{account.balance}}</td>
+            <td (click)="deposit(account.id)" class="btn btn-outline-success btn-sm" style="margin: 5px;">Deposit</td>
+            <td (click)="withdraw(account.id)" class="btn btn-outline-primary btn-sm" style="margin: 5px;">Withdraw</td>
+            <td (click)="delete(account.id)" class="btn btn-outline-danger btn-sm" style="margin: 5px;">Delete</td>
+            <td (click)="view(account.id)" class="btn btn-outline-dark btn-sm" style="margin: 5px;">View</td>
+
+        </tr>
+
+    </tbody>
+
+</table>
